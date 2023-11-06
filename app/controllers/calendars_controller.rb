@@ -18,7 +18,7 @@ class CalendarsController < ApplicationController
     params.require(:calendars).permit(:date, :plan)
   end
 
-  def getWeek
+  def get_week
     days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :plans => today_plans}
 
     # Dateオブジェクトは、日付を保持しています。下記のように`.today.day`とすると、今日の日付を取得できます。
